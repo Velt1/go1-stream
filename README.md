@@ -20,14 +20,14 @@ Begin by installing the MediaMtx Server on your Go1 RaspberryPI. The necessary r
 
 **Nano 13**:
 ```bash
-ffmpeg -f v4l2 -i /dev/video1 -an -c copy -f mpjpeg udp://192.168.123.161:5001 
-ffmpeg -f v4l2 -i /dev/video0 -an -c copy -f mpjpeg udp://192.168.123.161:5002
+ffmpeg -f v4l2 -framerate 15 -video_size 680x480 -i /dev/video1 -an -c copy -f mpjpeg 'udp://192.168.123.161:5001'
+ffmpeg -f v4l2 -framerate 15 -video_size 680x480 -i /dev/video0 -an -c copy -f mpjpeg 'udp://192.168.123.161:5002'
 ```
 
 **Nano 14**:
 ```bash
-ffmpeg -f v4l2 -i /dev/video1 -an -c copy -f mpjpeg udp://192.168.123.161:5003 
-ffmpeg -f v4l2 -i /dev/video0 -an -c copy -f mpjpeg udp://192.168.123.161:5004
+ffmpeg -f v4l2 -framerate 15 -video_size 680x480 -i /dev/video1 -an -c copy -f mpjpeg 'udp://192.168.123.161:5003'
+ffmpeg -f v4l2 -framerate 15 -video_size 680x480 -i /dev/video0 -an -c copy -f mpjpeg 'udp://192.168.123.161:5004'
 ```
 
 #### **Proxy Configuration**:
