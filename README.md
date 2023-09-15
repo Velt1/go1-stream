@@ -49,3 +49,4 @@ http://ROBOT_IP:8889/stream/
 ```
 ### Caution
 The script is resource-intensive and performs optimally when no other CPU-heavy scripts are running. I suggest terminating the 'unitree' processes before starting.
+If it exeeds 100% CPU, try sudo nvpmodel -m 0 on the NX.
